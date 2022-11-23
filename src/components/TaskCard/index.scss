@@ -1,0 +1,38 @@
+@import "../../scss/vars";
+
+.task-card {
+  background: $white;
+  padding: 10px 15px;
+  box-shadow: 0 2px 10px rgba(29, 29, 29, 0.25);
+  border-radius: 6px;
+  display: flex;
+  width: 100%;
+  margin-bottom: 10px;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+.task-card__wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.task-card__title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+  color: $black;
+}
+
+@media only screen and (min-width: 760px) {
+  .task-card {
+    width: calc(50% - 12px);
+    margin-bottom: 15px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .task-card {
+    width: calc(33% - 10px);
+  }
+}

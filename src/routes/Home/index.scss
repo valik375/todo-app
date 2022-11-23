@@ -1,0 +1,32 @@
+@import "../../scss/vars";
+
+.home {
+  padding-top: 40px;
+}
+.home__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.home__nav-select {
+  max-width: 160px;
+  height: 40px;
+  margin-right: 10px;
+}
+.home__nav-button {
+  height: 40px;
+  max-width: 160px;
+  font-size: 18px;
+}
+.home__wrapper {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.home__message {
+  margin: 20px auto 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: $black;
+}

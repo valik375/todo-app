@@ -1,0 +1,45 @@
+@import "../../scss/vars";
+
+.task__header {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.task__title {
+  font-size: 24px;
+  font-weight: 700;
+  color: $black;
+  margin-bottom: 4px;
+}
+.task__date {
+  font-size: 16px;
+  font-weight: 500;
+  color: $gray;
+}
+.task__wrapper {
+  width: 100%;
+  padding-bottom: 40px;
+}
+.task__sub-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+.task__button-wrapper {
+  margin-top: 40px;
+}
+.task__button {
+  margin: 10px auto 0;
+}
+
+@media only screen and (min-width: 760px) {
+  .task__container {
+    padding: 0;
+    max-width: 500px !important;
+    margin: 0 auto;
+  }
+}

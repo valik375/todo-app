@@ -1,0 +1,142 @@
+@import "../../scss/vars";
+
+.header {
+  height: 70px;
+  z-index: 9999999;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: $white;
+}
+.header__container {
+  height: 100%;
+}
+.header__wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: $green;
+}
+.header__user-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header__user-nav {
+  opacity: 0;
+  pointer-events: none;
+  transition: all .3s ease;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding-top: 50px;
+}
+.header__user-name-wrapper {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+
+  &:hover .header__user-nav {
+    opacity: 1;
+    pointer-events: all;
+  }
+  &:hover .header__user-name svg {
+    transform: rotate(180deg);
+  }
+}
+.header__user-name {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  span {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+    color: $black;
+    max-width: 160px;
+    width: 100%;
+    text-align: right;
+    margin-right: 8px;
+  }
+
+  svg {
+    transition: all .3s ease;
+  }
+}
+.header__user-nav-wrapper {
+  width: 200px;
+  box-shadow: 0 0 6px rgb(35 35 35 / 25%);
+  border-radius: 6px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 5px 10px;
+  z-index: 99999;
+  background: $white;
+}
+.header__user-link {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-bottom: 2px solid $gray;
+  padding: 10px 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+  color: $black;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+.header__user-link-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  background: $green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+
+  svg {
+    width: 20px;
+    height: 26px;
+  }
+}
+.header__user-image {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 100px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media only screen and (min-width: 760px) {
+  .header__user-name {
+
+    span {
+      max-width: 200px;
+    }
+  }
+  .header__title {
+    font-size: 24px;
+  }
+}

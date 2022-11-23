@@ -1,0 +1,56 @@
+@import "../../scss/vars";
+
+.error-message {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(35, 35, 35, 0.35);
+  opacity: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 99999999999;
+  background: $white;
+
+  &.visible {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  &.error .error-message__icon {
+    background: $red;
+  }
+
+  &.warning .error-message__icon {
+    background: $yellow;
+  }
+
+  &.success .error-message__icon {
+    background: $green;
+  }
+}
+.error-message__wrapper {
+  padding: 14px;
+}
+.error-message__icon {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.error-message__text {
+  font-size: 16px;
+  font-weight: 500;
+  color: $black;
+  max-width: 340px;
+}
+
+@media only screen and (min-width: 760px) {
+  .error-message {
+    right: calc(50% - (1160px / 2));
+  }
+}

@@ -1,0 +1,35 @@
+@import "../../scss/vars";
+
+.registration {
+  width: 100%;
+  min-height: 100vh;
+  background: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.registration__wrapper {
+  background: $white;
+  padding: 30px 20px;
+  width: 380px;
+  border-radius: 6px;
+  height: 100vh;
+  overflow: auto;
+}
+.registration__title {
+  margin-bottom: 8px;
+}
+.registration__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: rgba(24, 24, 24, 0.4);
+  margin-bottom: 30px;
+}
+
+@media only screen and (min-width: 760px) {
+  .registration__wrapper {
+    box-shadow: 0 0 16px rgba(35, 35, 35, 0.25);
+    height: auto;
+  }
+}
